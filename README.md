@@ -1,1 +1,4 @@
 # tideman
+This was my Tideman project done in CS50. Honestly, this was the most difficult thing I have coded so far. The logic required by “locking” pairs without forming a circle was a major barrier to my progress.
+
+I also took quite a long time to understand how to go about tracing back the connections in the graph. I later understood the need to apply recursion to determine if the winner in the chain has been in the previous chain as well. I would like to extend my gratitude to Neso Academy’s recursion tutorial, which finally helped me understand recursion, and through which I managed to develop the function check_if_circle_exists. I could not even estimate how long it would take to develop this function without the help of Neso Academy’s tutorial. It’s fantastic to finally have this working.
