@@ -1,4 +1,20 @@
-# tideman
-This was my Tideman project done in CS50. Honestly, this was the most difficult thing I have coded so far. The logic required by “locking” pairs without forming a circle was a major barrier to my progress.
+Tideman (Ranked-Choice Voting System)
+Project Overview
+This project is an implementation of the Tideman voting method (also known as "Ranked Pairs"), which is a complex election system that guarantees a "Condorcet winner" if one exists. Unlike simple plurality voting, Tideman avoids "spoiler effects" by allowing voters to rank candidates in order of preference.
 
-I also took quite a long time to understand how to go about tracing back the connections in the graph. I later understood the need to apply recursion to determine if the winner in the chain has been in the previous chain as well. I would like to extend my gratitude to Neso Academy’s recursion tutorial, which finally helped me understand recursion, and through which I managed to develop the function check_if_circle_exists. I could not even estimate how long it would take to develop this function without the help of Neso Academy’s tutorial. It’s fantastic to finally have this working.
+The Challenge
+The core of this project is solving the problem of cycle detection in a directed graph. When locking in pairs of candidates based on their strength of victory, the algorithm must ensure that no circular dependencies (cycles) are created, which would make it impossible to determine a clear winner.
+
+Key Features & Implementation
+Preference Mapping: Developed a system to record and count voter preferences across all candidates in a multi-dimensional array.
+
+Strength of Victory: Implemented logic to sort candidate pairs by the margin of victory, ensuring the most decisive wins are processed first.
+
+Cycle Detection (Recursion): Designed a recursive algorithm to traverse a directed graph and prevent the creation of cycles before "locking" a victory.
+
+Source Determination: Wrote logic to identify the "Source" of the graph (the candidate with no incoming edges) to declare the final winner.
+
+Technical Stack
+Language: C
+
+Concepts: Recursion, Adjacency Matrices, Directed Graphs, Sorting Algorithms, Memory Management.
